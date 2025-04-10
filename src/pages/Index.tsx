@@ -2,26 +2,29 @@
 import React from "react";
 import { QuizProvider } from "../context/QuizContext";
 import QuizContainer from "../components/QuizContainer";
-import { Leaf } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen py-10 px-4">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-10">
-          <div className="inline-flex items-center justify-center bg-primary/10 p-3 rounded-full mb-4">
-            <Leaf className="h-6 w-6 text-primary" />
+          <div className="flex justify-center mb-4">
+            <img 
+              src="https://barbatimaodealagoas.com.br/wp-content/uploads/2022/08/HPV-CURA-LOGO-FINAL2-1024x755.png" 
+              alt="Barbatimão Logo" 
+              className="h-24 md:h-32 w-auto"
+            />
           </div>
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-2xl md:text-3xl font-bold mb-2">
             Qual produto de barbatimão é ideal para você?
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Responda a algumas perguntas simples e descubra o melhor produto 
             de barbatimão para suas necessidades específicas.
           </p>
         </header>
 
-        <div className="quiz-container">
+        <div className="quiz-container shadow-lg">
           <QuizProvider>
             <QuizContainer />
           </QuizProvider>
