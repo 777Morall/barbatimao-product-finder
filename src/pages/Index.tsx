@@ -1,9 +1,16 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { QuizProvider } from "../context/QuizContext";
 import QuizContainer from "../components/QuizContainer";
+import VideoPresentation from "../components/VideoPresentation";
 
 const Index = () => {
+  const [videoCompleted, setVideoCompleted] = useState(false);
+
+  const handleVideoComplete = () => {
+    setVideoCompleted(true);
+  };
+
   return (
     <div className="min-h-screen py-10 px-4">
       <div className="max-w-4xl mx-auto">
@@ -24,11 +31,15 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="quiz-container shadow-lg">
-          <QuizProvider>
-            <QuizContainer />
-          </QuizProvider>
-        </div>
+        {!videoCompleted ? (
+          <VideoPresentation onComplete={handleVideoComplete} />
+        ) : (
+          <div className="quiz-container shadow-lg animate-fade-in">
+            <QuizProvider>
+              <QuizContainer />
+            </QuizProvider>
+          </div>
+        )}
 
         <footer className="text-center mt-10 text-sm text-muted-foreground">
           <p>
