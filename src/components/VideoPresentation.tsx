@@ -42,8 +42,8 @@ const VideoPresentation: React.FC<VideoPresentationProps> = ({ onComplete }) => 
       <div className="relative rounded-lg overflow-hidden shadow-xl bg-black">
         {!isPlaying && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 z-10">
-            <h2 className="text-white text-xl md:text-2xl font-semibold mb-6">
-              Conheça mais sobre o poder do Barbatimão
+            <h2 className="text-white text-xl md:text-2xl font-semibold mb-6 px-4 text-center">
+              Conheça mais sobre o poder do Barbatimão para a saúde
             </h2>
             <Button 
               onClick={handlePlayClick} 
@@ -63,6 +63,8 @@ const VideoPresentation: React.FC<VideoPresentationProps> = ({ onComplete }) => 
           src="https://linkproibido.com/hpv.cura.mp4"
           playsInline
           preload="auto"
+          poster="https://barbatimaodealagoas.com.br/wp-content/uploads/2022/08/HPV-CURA-LOGO-FINAL2-1024x755.png"
+          controls={isPlaying}
         />
 
         {isPlaying && (

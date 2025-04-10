@@ -4,81 +4,81 @@ import { Question } from "../types/quiz";
 export const quizQuestions: Question[] = [
   {
     id: "q1",
-    text: "Qual é sua principal necessidade ao usar produtos à base de barbatimão?",
+    text: "Qual é sua principal necessidade ao buscar produtos de barbatimão?",
     options: [
       {
         id: "q1o1",
-        text: "Cicatrização de feridas",
+        text: "Cicatrização de feridas ou lesões na pele",
         value: "cicatrizacao",
       },
       {
         id: "q1o2",
-        text: "Redução de inflamações",
+        text: "Redução de inflamações e dores",
         value: "inflamacao",
       },
       {
         id: "q1o3",
-        text: "Saúde íntima feminina",
+        text: "Cuidados com a saúde íntima feminina",
         value: "saude-intima",
       },
       {
         id: "q1o4",
-        text: "Outro",
-        value: "outro",
+        text: "Fortalecimento do sistema imunológico",
+        value: "imunidade",
       },
     ],
   },
   {
     id: "q2",
-    text: "Você prefere produtos para uso tópico ou oral?",
+    text: "Você prefere produtos para uso tópico (externo) ou oral?",
     options: [
       {
         id: "q2o1",
-        text: "Tópico (cremes, pomadas)",
+        text: "Uso tópico (aplicação direta na pele)",
         value: "topico",
       },
       {
         id: "q2o2",
-        text: "Oral (chá, cápsulas)",
+        text: "Uso oral (consumo por ingestão)",
         value: "oral",
       },
     ],
   },
   {
     id: "q3",
-    text: "Com que frequência você pretende usar o produto?",
+    text: "Com que frequência você pretende utilizar o produto?",
     options: [
       {
         id: "q3o1",
-        text: "Diariamente",
+        text: "Diariamente, como parte da minha rotina",
         value: "diario",
       },
       {
         id: "q3o2",
-        text: "Apenas quando necessário",
+        text: "Apenas quando necessário, em situações específicas",
         value: "ocasional",
       },
     ],
   },
   {
     id: "q4",
-    text: "Você tem alergia a algum ingrediente natural?",
+    text: "Você já teve alguma reação alérgica a produtos naturais anteriormente?",
     options: [
       {
         id: "q4o1",
-        text: "Sim",
+        text: "Sim, tenho pele sensível ou histórico de alergias",
         value: "sim",
       },
       {
         id: "q4o2",
-        text: "Não",
+        text: "Não, nunca tive problemas com produtos naturais",
         value: "nao",
       },
     ],
   },
   {
     id: "q5",
-    text: "Para qual faixa etária você está buscando o produto?",
+    text: "Para qual faixa etária você está buscando este produto?",
     options: [
       {
         id: "q5o1",
@@ -92,28 +92,28 @@ export const quizQuestions: Question[] = [
       },
       {
         id: "q5o3",
-        text: "Idosos (+60 anos)",
+        text: "Idosos (acima de 60 anos)",
         value: "idoso",
       },
     ],
   },
   {
     id: "q6",
-    text: "Qual formato você prefere?",
+    text: "Qual formato de produto você prefere utilizar?",
     options: [
       {
         id: "q6o1",
-        text: "Creme ou pomada",
+        text: "Creme, gel ou pomada para aplicação local",
         value: "creme",
       },
       {
         id: "q6o2",
-        text: "Cápsulas ou comprimidos",
+        text: "Cápsulas ou comprimidos para ingestão",
         value: "capsula",
       },
       {
         id: "q6o3",
-        text: "Chá ou infusão",
+        text: "Chá, extrato ou tintura líquida",
         value: "cha",
       },
     ],
