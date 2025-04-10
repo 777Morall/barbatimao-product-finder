@@ -1,15 +1,37 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QuizProvider } from "../context/QuizContext";
 import QuizContainer from "../components/QuizContainer";
 import VideoPresentation from "../components/VideoPresentation";
 
 const Index = () => {
   const [videoCompleted, setVideoCompleted] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Add a slight delay to ensure smooth transitions
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleVideoComplete = () => {
     setVideoCompleted(true);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <img 
+          src="https://barbatimaodealagoas.com.br/wp-content/uploads/2022/08/HPV-CURA-LOGO-FINAL2-1024x755.png" 
+          alt="Barbatimão Logo" 
+          className="h-20 w-auto animate-pulse"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen py-6 md:py-10 px-4">
